@@ -38,10 +38,38 @@ All files for this project can be downloaded from here (link).
 ### Deliverables
 We will be expected to deliver a GitHub repository with the following:
 
-● Airflow DAG file for the data pipeline.
+● Airflow DAG file for the data pipeline. - in this repo
 
 ● Documentation of the pipeline.
 
 ○ Highlight at least 3 best practices used during the implementation.
 ○ Recommendations for deployment and running the pipeline in a cloud-based
 provider.
+
+## Documentation
+
+Developing a data pipeline using Airflow to extract, transform, and load data from CSV files into a mongodb database can be done using the following steps:
+
+### Step 1: Setting up the Environment
+
+Before creating the DAG, you need to set up the environment to run the pipeline. You need to install Apache Airflow, mongodb, and the required Python libraries for data processing.
+
+### Step 2: Creating the DAG
+
+The next step is to create the DAG that defines the workflow of the data pipeline. In Airflow, a DAG is a collection of tasks that are arranged in a specific order. Each task in a DAG represents a unit of work that needs to be executed.
+
+The DAG should be created in a Python file and stored in the dags folder of the Airflow installation directory.
+
+### Step 3: Defining Python Functions for Tasks
+
+The next step is to define Python functions for each task in the DAG. These functions should contain the logic to extract, transform, and load data from the CSV files to the mongo database
+
+## Deployment Recommendations:
+<ul><li>
+Use a cloud-based provider such as AWS, Azure or GCP to deploy the data pipeline. This makes it easier to scale the data pipeline as the amount of data grows.
+</li>
+<li>
+Use a containerization technology such as Docker to package the data pipeline code and dependencies. This makes it easier to deploy the data pipeline to different environments.
+</li>
+<li>
+Use an Infrastructure as Code (IaC) tool such as Terraform to provision the infrastructure needed for the data pipeline. This makes it easier to automate the deployment and ensure consistency across different environments.</li></ul>
